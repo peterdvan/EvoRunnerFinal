@@ -1,0 +1,10 @@
+TextButton soldier = new TextButton("Select", wordFont);
+        soldier.getLabel().setFontScale(4);
+        soldier.setPosition((SCREEN_WIDTH / 7) + 25, (SCREEN_HEIGHT - (4 * (SCREEN_HEIGHT / 3))) - 85);
+        soldier.addListener((new ChangeListener() {
+            @Override
+            public void changed(ChangeEvent event, Actor actor) {
+                savedData.putInteger("Character", 9).flush();
+            }
+        }));
+        stage.addActor(soldier);
